@@ -1,0 +1,12 @@
+version: '3'
+services:
+  py_dev:
+    tty: true
+    container_name: py_dev
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ~/script/python_lesson/python-data-analysis:/work
+    ports:
+      - "8888:8888"
