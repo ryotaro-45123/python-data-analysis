@@ -1,4 +1,7 @@
 FROM jupyter/datascience-notebook:latest
+USER root
+RUN apt update && apt install -y \
+	graphviz
 RUN pip install \
 	japanize-matplotlib \
 	lxml \
